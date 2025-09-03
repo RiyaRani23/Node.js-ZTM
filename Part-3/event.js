@@ -20,5 +20,6 @@ celebrity.on('race win' , (result) => {
 celebrity.emit('race win', 'win');
 celebrity.emit('race lost', 'lost');
 celebrity.emit('race win' , 'win');
+celebrity.emit('race lost','lost');
 
 
