@@ -9,8 +9,8 @@
 
 // WE can directly write send and read that represent we are only 
 // calling send and read function from response and request file
-const { send } = require('./request.js');
-const { read } = require('./response.js');
+const { send } = require('./internals/request.js');
+const { read } = require('./internals/response.js');
 
 function makeRequest(url,data){
     send(url , data);
