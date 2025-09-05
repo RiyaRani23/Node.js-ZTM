@@ -1,12 +1,14 @@
+
+
 function decrypt(data) {
     return 'decrypted data';
 }
 
-function read(){
+module.exports.read = function read(){
     return decrypt('data');
 }
 
-
-module.exports ={
-    read,
-}
+// shorthand
+// module.exports ={
+//     read,
+// }
