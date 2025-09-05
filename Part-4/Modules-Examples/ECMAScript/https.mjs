@@ -9,3 +9,10 @@ function makeRequest(url,data){
 
 const responseData = makeRequest('https://google.com' , 'Hii')
 console.log(responseData);
+
+
+
+// OutPut
+
+
+// sending encrypted data to https://google.com decrypted data
