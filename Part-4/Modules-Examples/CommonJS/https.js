@@ -19,3 +19,14 @@ function makeRequest(url,data){
 
 const responseData = makeRequest('https://google.com' , 'Hii')
 console.log(responseData);
+
+// Above code is CommonJs Modules
+
+// *********************************************************
+// Below is ECMAScript Modules
+
+// import { send } from './request.js';
+// import { read } from './response.js';
+
+ 
+
