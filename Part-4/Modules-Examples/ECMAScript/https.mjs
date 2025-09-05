@@ -1,5 +1,5 @@
-import { send } from './internals/request.mjs';
-import { read } from './internals/response.mjs';
+import { send } from './request.mjs';
+import { read } from './response.mjs';
 
 
 function makeRequest(url,data){
