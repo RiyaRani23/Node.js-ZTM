@@ -28,5 +28,14 @@ console.log(responseData);
 // import { send } from './request.js';
 // import { read } from './response.js';
 
+
+
+
+
+// OutPut
+
+// sending encrypted data to https://google.com
+// decrypted data
+
  
 
