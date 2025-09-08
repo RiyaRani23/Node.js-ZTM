@@ -6,11 +6,15 @@ const PORT = 3000;
 
 
 app.get('/' , (req , res) => {
-   res.send('Heeelloooo');
+//    res.send('Heeelloooo');
+      res.send({
+        id : 1,
+        name : 'Sir Issac Newton'
+      });
 });
 
 app.get('/messages' , (req , res) => {
-   res.send('<ul><li>Hello Albert! </li></ul>');
+   res.send('<ul><li> Hello Albert! </li></ul>');
 });
 
 app.post('/messages' , (req , res) => {
