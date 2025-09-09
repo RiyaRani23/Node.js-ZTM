@@ -13,8 +13,34 @@ const friends = [
         id : 1,
         name : 'Sir Isaac Newton '
     }
-    
+
 ];
+
+// Middleware
+app.use((req , res , next) => {
+    const start = Data.now();
+    next();
+    // actions go here....
+    const delta = Date.now() - start;
+    console.log(`${req.method} ${req.url} ${delta}ms`);
+})
+
+app.use(express.json());
+
+app.post('/friends' , (req , res) => {
+    if(req.body.name){
+        res.status(400).json({
+            error: 'Missing Friend Name'
+        });
+    }
+    const newFriend = {
+        name : req.body.name,
+        id : friends.length
+    };
+    friends.push(newFriend);
+
+    res.json(newFriend);
+})
 
 app.get('/friends' , (req , res) => {
 //    res.send('Heeelloooo');
