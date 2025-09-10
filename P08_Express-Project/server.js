@@ -26,7 +26,7 @@ app.use((req , res , next) => {
 })
 
 app.use(express.json());
-
+  
 app.post('/friends' , (req , res) => {
     if(req.body.name){
         res.status(400).json({
