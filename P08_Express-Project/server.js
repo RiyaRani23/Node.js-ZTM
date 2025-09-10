@@ -1,7 +1,7 @@
 const express = require ('express');
 
-const friendsController = require('./controllers/friends.controllers');
-const messagesController = require('./controllers/messages.controllers');
+const friendsController = require('./controllers/friends.controller');
+const messagesController = require('./controllers/messages.controller');
 
 const app = express();
 
@@ -18,10 +18,8 @@ app.use((req , res , next) => {
 
 app.use(express.json());
   
-app.post('/friends' ,friendsController.postFriend)
-
+app.post('/friends' ,friendsController.postFriend);
 app.get('/friends' , friendsController.getFriends);
-
 app.get('/friends/:friendId', friendsController.getFriend );
 
 // app.get('/messages' , (req , res) => {
