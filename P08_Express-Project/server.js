@@ -1,9 +1,13 @@
 const express = require ('express');
+const path = require('path');
 
 const friendsController = require('./controllers/friends.controller');
 const messagesController = require('./controllers/messages.controller');
 
 const app = express();
+
+app.set('view engine','hbs');
+app.set('views',path.join(__dirname,'views'));
 
 const PORT = 3000;
 
@@ -14,26 +18,33 @@ app.use((req , res , next) => {
     // actions go here....
     const delta = Date.now() - start;
     console.log(`${req.method} ${req.url} ${delta}ms`);
-})
+});
 
+app.use('/site', express.static(path.join(__dirname,'public')));
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.render('index', {
+    title: 'My Friends Are VERYY Clever',
+    caption: 'Let\'s go skiing!',
+  });
+});
+
   
-app.post('/friends' ,friendsController.postFriend);
-app.get('/friends' , friendsController.getFriends);
-app.get('/friends/:friendId', friendsController.getFriend );
 
 // app.get('/messages' , (req , res) => {
 //    res.send('<ul><li> Hello Albert! </li></ul>');
 // });
 
-app.get('/messages', messagesController.getMessages );
+app.use('/friends', friendsRouter);
+app.use('/messages', messagesRouter);
+
 
 // app.post('/messages' , (req , res) => {
 //    console.log('Updating Messages ....');
 // });
 
 
-app.post('/messages', messagesController.postMessage );
 
 
 app.listen(PORT, () => {
