@@ -1,8 +1,8 @@
 const express = require ('express');
 const path = require('path');
 
-const friendsController = require('./controllers/friends.controller');
-const messagesController = require('./controllers/messages.controller');
+const friendsRouter = require('./routes/friends.router');
+const messagesRouter = require('./routes/messages.router');
 
 const app = express();
 
