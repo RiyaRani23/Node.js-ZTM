@@ -1,4 +1,3 @@
-
 {
   "name": "nasa-project-api",
   "version": "1.0.0",
@@ -14,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "cse": "^1.0.4",
     "csv-parse": "^6.1.0",
     "express": "^5.1.0",
     "p09_nasa_project": "file:.."
