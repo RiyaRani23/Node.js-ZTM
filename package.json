@@ -1,0 +1,27 @@
+{
+  "name": "node.js-ztm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix P09_NASA-Project/server",
+    "install-client": "npm install --prefix P09_NASA-Project/client",
+    "install": "npm run install-server && npm run install-client",
+    "server": " npm run watch --prefix P09_NASA-Project/server",
+    "client": " npm start --prefix P09_NASA-Project/client",
+    "watch":"npm run server & npm run client",
+    "deploy": "npm run build --prefix P09_NASA-Project/client && npm start --prefix P09_NASA-Project/server",
+    "test": "npm run test --prefix P09_NASA-Project/server && npm run test --prefix P09_NASA-Project/client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiyaRani23/Node.js-ZTM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RiyaRani23/Node.js-ZTM/issues"
+  },
+  "homepage": "https://github.com/RiyaRani23/Node.js-ZTM#readme"
+}
